@@ -1,307 +1,321 @@
 {
-  "meta": {
-    "event": "SUGCON India 2026 · New Delhi · June 4–5",
-    "title": "Claude, Meet Sitecore.",
-    "subtitle": "How I run an entire Sitecore website from an AI chat window — using the Marketer MCP.",
-    "speaker": {
-      "name": "[Your Name]",
-      "title": "[Your Title, Company]",
-      "linkedin": "linkedin.com/in/[you]",
-      "twitter": "@[yourhandle]",
-      "blog": "blog.[your-site].com"
-    },
-    "duration": "30 minutes",
-    "track": "Marketers Track"
-  },
-  "slides": [
-    {
-      "type": "title",
-      "kicker": "SUGCON India 2026 · New Delhi · June 4–5",
-      "title": "Claude, Meet Sitecore.",
-      "subtitle": "How I run an entire Sitecore website from an AI chat window — using the <span class='accent'>Marketer MCP</span>.",
-      "pills": [
-        {"text": "Live Demos", "class": "cyan"},
-        {"text": "Zero Code", "class": ""},
-        {"text": "Enterprise-Ready", "class": "green"},
-        {"text": "30 Minutes", "class": "red"}
-      ],
-      "hint": "0:00 – 0:30 · Walk on, smile, wait for the room to settle. Good morning, Delhi.",
-      "footer": "Marketers Track · 30 min"
-    },
-    {
-      "type": "split",
-      "kicker": "The Reality in 2026",
-      "kickerClass": "red",
-      "heading": "A marketer opens Sitecore to change <span class='accent-red'>one headline</span>.",
-      "left": {
-        "variant": "bad",
-        "heading": "Traditional flow — 47 clicks",
-        "items": [
-          "Log into Cloud Portal",
-          "Switch to XM Cloud Pages",
-          "Find the right site · right page",
-          "Open Experience Editor",
-          "Click the component · Edit · Save",
-          "Switch languages · Repeat",
-          "Open Explorer to create variant",
-          "Configure personalization rule",
-          "Publish · Validate · Done (maybe)"
-        ]
-      },
-      "right": {
-        "variant": "good",
-        "heading": "With Marketer MCP — 1 prompt",
-        "quote": "Update the homepage hero headline to 'Biggest Diwali Sale Ever — 70% Off', create a Hindi version, and add a returning-customer personalization.",
-        "footnote": "That's it. That's the whole interface."
-      },
-      "hint": "0:30 – 2:00 · Raise hands: Who's done the 47-click dance this week? Wait. Laugh together.",
-      "footer": "The Problem"
-    },
-    {
-      "type": "chat",
-      "kicker": "The Promise",
-      "heading": "In the next 28 minutes, <span class='accent-cyan'>I won't open Sitecore Pages once.</span>",
-      "lead": "I'll create pages · add components · localize to Hindi · set up personalization · pull a brief from Asana · ping Slack — all from <b>one chat window</b>.",
-      "messages": [
-        {"role": "you", "text": "Create a Diwali Mega Sale page with a hero, make a Hindi version, and personalize for returning customers."},
-        {"role": "tool", "text": "calling create_page..."},
-        {"role": "tool", "text": "calling add_component_on_page..."},
-        {"role": "tool", "text": "calling update_content..."},
-        {"role": "tool", "text": "calling add_language_version..."},
-        {"role": "tool", "text": "calling create_personalization_version..."},
-        {"role": "claude", "text": "Done. Page created, Hindi variant live, personalization active. <a>Preview ↗</a>"}
-      ],
-      "hint": "2:00 – 3:00 · Point at the screen. This is real. Not a mockup. Watch.",
-      "footer": "The Promise"
-    },
-    {
-      "type": "diagram",
-      "kicker": "The What",
-      "heading": "MCP, in one sentence.",
-      "pull": "<span class='highlight'>MCP is USB-C for AI</span> — one open standard that lets any AI assistant talk to any business tool.",
-      "nodes": [
-        {"icon": "🧑", "label": "Marketer", "sub": "Natural language"},
-        {"icon": "🤖", "label": "Claude · Copilot · Cursor", "sub": "The AI client"},
-        {"icon": "🔌", "label": "Marketer MCP", "sub": "The translator", "primary": true},
-        {"icon": "🌐", "label": "SitecoreAI", "sub": "The action"}
-      ],
-      "cards": [
-        {"title": "Open Standard", "body": "Donated to the Linux Foundation (Dec 2025). Not locked to any one vendor."},
-        {"title": "Any AI, Any Tool", "body": "Claude, ChatGPT, Gemini, Copilot — all speak MCP. So do Asana, Figma, Slack, Jira."},
-        {"title": "Already In Your Box", "body": "Marketer MCP ships with SitecoreAI. No extra license, no infra to run."}
-      ],
-      "hint": "3:00 – 4:30 · The USB-C analogy lands with every audience — keep it short, move on.",
-      "footer": "What Is MCP?"
-    },
-    {
-      "type": "architecture",
-      "kicker": "Under the Hood",
-      "heading": "From prompt to Sitecore action — in 6 steps.",
-      "steps": [
-        {"n": "1.", "text": "Marketer types in Claude"},
-        {"n": "2.", "text": "LLM parses intent"},
-        {"n": "3.", "text": "Selects MCP tool <code>(create_page)</code>"},
-        {"n": "4.", "text": "MCP calls Agent API endpoint"},
-        {"n": "5.", "text": "Sitecore executes · audits · returns"},
-        {"n": "6.", "text": "Claude shows result in chat"}
-      ],
-      "cards": [
-        {"title": "Security Layer", "body": "OAuth 2.0 via Sitecore Identity · short-lived tokens · tenant isolation · every tool call authenticated."},
-        {"title": "Permission Inheritance", "body": "The AI can't do anything <i>you</i> can't do. Your Sitecore role is the ceiling."},
-        {"title": "Full Audit Trail", "body": "Every action logged with job ID. Reviewable. Reversible."},
-        {"title": "Your Data Stays Yours", "body": "Prompts and content never train the model. Zero data leakage by design."}
-      ],
-      "hint": "4:30 – 6:00 · This slide kills the biggest enterprise objection: Is it safe?",
-      "footer": "Architecture & Security"
-    },
-    {
-      "type": "tools",
-      "kicker": "What Ships Today",
-      "heading": "30+ tools. Every major marketer workflow.",
-      "tools": [
-        {"name": "list_sites · list_pages", "desc": "Navigate your tenant"},
-        {"name": "create_page · get_page_html", "desc": "Build & preview pages"},
-        {"name": "get_page_screenshot", "desc": "Visual preview in chat"},
-        {"name": "add_component_on_page", "desc": "Drop in heroes, banners, CTAs"},
-        {"name": "update_content", "desc": "Change copy on any page"},
-        {"name": "add_language_version", "desc": "Localize in one step"},
-        {"name": "create_personalization_version", "desc": "Audience variants"},
-        {"name": "find_assets · update_alt_text", "desc": "DAM operations"},
-        {"name": "generate_brief · list_brand_kits", "desc": "Campaign planning"}
-      ],
-      "note": "New in Q1 2026: <span class='accent-cyan'>get_page_preview_url</span>, <span class='accent-cyan'>get_personalization_condition_templates</span>, and more.",
-      "hint": "6:00 – 7:00 · Skim fast. Don't memorize — just know the surface area is huge.",
-      "footer": "Tool Inventory"
-    },
-    {
-      "type": "cards",
-      "kicker": "Live Demo · 1 of 2",
-      "kickerClass": "green",
-      "heading": "From zero to connected — in 2 minutes.",
-      "cards": [
-        {"title": "Step 1 · Claude Desktop", "body": "Settings → Connectors → <b>Add custom connector</b>"},
-        {"title": "Step 2 · Paste URL", "body": "<span class='mono'>https://edge-platform.sitecorecloud.io/mcp/marketer-mcp-prod</span>"},
-        {"title": "Step 3 · OAuth + Pick Tenant", "body": "Login with your Sitecore creds · select Org · select Tenant · done."}
-      ],
-      "bigNote": "✓ You're in. Claude now controls Sitecore.",
-      "bigNoteColor": "green",
-      "hint": "7:00 – 9:00 · SWITCH TO LIVE. Screen-share Claude Desktop. Pre-open settings for speed. Keep talking while OAuth redirects.",
-      "footer": "Demo 1 — Setup"
-    },
-    {
-      "type": "chat",
-      "kicker": "Live Demo · The Diwali Campaign",
-      "kickerClass": "green",
-      "heading": "One chat. Full campaign.",
-      "messages": [
-        {"role": "you", "text": "Show me all my sites."},
-        {"role": "tool", "text": "list_sites → SUGCON Demo Store ✓"},
-        {"role": "you", "text": "Create a new page Diwali Mega Sale 2026 under the homepage, add a hero, and set the headline to Biggest Diwali Sale Ever — 70% Off Everything."},
-        {"role": "tool", "text": "create_page ✓ add_component_on_page ✓ update_content ✓"},
-        {"role": "you", "text": "Take a screenshot of the Diwali Mega Sale page."},
-        {"role": "tool", "text": "get_page_screenshot → [image appears]"},
-        {"role": "you", "text": "Create a Hindi version."},
-        {"role": "tool", "text": "add_language_version (hi-IN) ✓"},
-        {"role": "you", "text": "Add a personalization version for returning customers: hero says Welcome Back — Your Exclusive Deals Are Live."},
-        {"role": "tool", "text": "create_personalization_version ✓"},
-        {"role": "claude", "text": "Page live. Hindi variant created. Personalization active for Returning Visitor segment. Preview URL: ↗"}
-      ],
-      "hint": "9:00 – 16:00 · Run the prompts SLOWLY. After each, ALT-TAB to Sitecore browser and show the change. This is the wow moment.",
-      "footer": "Demo 1 — Build"
-    },
-    {
-      "type": "chat",
-      "kicker": "Live Demo · 2 of 2 · The Only-MCP-Can-Do-This Moment",
-      "kickerClass": "red",
-      "heading": "One prompt. <span class='accent-red'>Four tools.</span> Zero tab switching.",
-      "messages": [
-        {"role": "you", "text": "Pull the latest approved campaign brief from Asana, build a landing page in Sitecore based on it, and post a note in #marketing on Slack when it's live."},
-        {"role": "tool", "text": "Asana MCP · get_task(Approved Briefs) → Republic Day Offer ✓"},
-        {"role": "tool", "text": "Marketer MCP · create_page(Republic Day Offer) ✓"},
-        {"role": "tool", "text": "Marketer MCP · add_component_on_page(hero) ✓"},
-        {"role": "tool", "text": "Marketer MCP · update_content(26% Off · Celebrate Republic Day) ✓"},
-        {"role": "tool", "text": "Slack MCP · post_message(#marketing, 🇮🇳 Page is live: [preview-url]) ✓"},
-        {"role": "claude", "text": "All done. Campaign brief → Sitecore → Slack notified. Total time: 14 seconds."}
-      ],
-      "bigNote": "A marketer who needed <b>3 days</b> and a developer just did this in <b>14 seconds</b>.",
-      "hint": "16:00 – 22:00 · THE CLIMAX. This is what no one else will show. Have Asana + Slack pre-open in tabs. Reveal each tab after the action completes.",
-      "footer": "Demo 2 — Orchestration"
-    },
-    {
-      "type": "split",
-      "kicker": "Enterprise Angle",
-      "heading": "Not a Claude user? Microsoft Copilot Studio works too.",
-      "left": {
-        "variant": "good",
-        "heading": "Same MCP endpoint",
-        "items": [
-          "Same URL, same tools, same auth",
-          "Build custom agents inside M365",
-          "Your marketing team stays in Teams",
-          "Governance via Microsoft Purview"
-        ]
-      },
-      "right": {
-        "variant": "",
-        "heading": "<span style='color:#c7d2fe'>Choose your AI. Choose your workflow.</span>",
-        "pills": [
-          {"text": "Claude Desktop", "class": "cyan"},
-          {"text": "Copilot Studio", "class": "cyan"},
-          {"text": "Cursor IDE", "class": "cyan"},
-          {"text": "ChatGPT (soon)", "class": ""},
-          {"text": "Gemini (soon)", "class": ""}
-        ],
-        "footnote": "MCP is the standard. Sitecore speaks it. Your AI speaks it. You win."
-      },
-      "hint": "22:00 – 24:00 · Show Copilot Studio screenshot if short on time; demo live if comfortable.",
-      "footer": "Multi-Client"
-    },
-    {
-      "type": "split",
-      "kicker": "The Question Everyone Asks",
-      "heading": "Marketer MCP <span style='color:#94a3b8'>vs.</span> Agentic Studio — when to use what?",
-      "left": {
-        "variant": "",
-        "heading": "<span style='color:#22d3ee'>Use Marketer MCP when…</span>",
-        "items": [
-          "⚡ Quick actions from your AI assistant",
-          "🔗 Cross-tool workflows (Sitecore + Asana + Slack)",
-          "🎯 You live in Claude / Copilot already",
-          "🚀 Rapid campaign setup & prototyping"
-        ],
-        "nobullet": true
-      },
-      "right": {
-        "variant": "",
-        "heading": "<span style='color:#f472b6'>Use Agentic Studio when…</span>",
-        "items": [
-          "🧩 Multi-step automated workflows",
-          "🛠 Custom agent building (Workflow Editor)",
-          "📊 Signals & market intelligence",
-          "👥 Team collaboration in Spaces"
-        ],
-        "nobullet": true
-      },
-      "bigNote": "They're <span class='accent-cyan'>complementary</span>, not competing. MCP = the remote. Agentic Studio = the war room.",
-      "hint": "24:00 – 26:00 · Pre-empt the #1 question from the audience. Score points for clarity.",
-      "footer": "Positioning"
-    },
-    {
-      "type": "cards",
-      "kicker": "Be Honest With Your Audience",
-      "kickerClass": "amber",
-      "heading": "What's the catch? <span style='color:#94a3b8'>(There's always a catch.)</span>",
-      "cards": [
-        {"title": "⚠ Early days", "titleColor": "red", "body": "Marketer MCP is only reliable for documented use cases. Off-script prompts can produce unexpected output."},
-        {"title": "⚠ Always review", "titleColor": "red", "body": "Treat AI-generated pages like any draft — review before publish. Existing approval workflows still apply."},
-        {"title": "⚠ Needs Stream enabled", "titleColor": "red", "body": "Your Cloud Portal admin must turn on Sitecore Stream. Takes 5 minutes, but check before you evangelize."},
-        {"title": "✓ Rollback is a click", "titleColor": "green", "body": "Every AI change is versioned. Undo is native. You're never stuck with a hallucination."}
-      ],
-      "hint": "26:00 – 27:30 · This slide BUILDS trust. Honesty about limits = credibility for the rest of the claims.",
-      "footer": "Real Talk"
-    },
-    {
-      "type": "challenge",
-      "kicker": "Before Your Flight Home Tonight",
-      "kickerClass": "red",
-      "heading": "Your 2-minute challenge.",
-      "steps": [
-        {"time": "1 min", "text": "Open claude.ai/download · install Claude Desktop"},
-        {"time": "30 sec", "text": "Settings → Connectors → paste the Marketer MCP URL"},
-        {"time": "30 sec", "text": "Login · pick your tenant · you're connected"},
-        {"time": "Bonus", "text": "Type: Create a page called Hello SUGCON · screenshot the result · tag me on LinkedIn", "highlight": true}
-      ],
-      "bigNote": "The first 10 people who do this and DM me → I'll send you the prompt playbook I used today.",
-      "hint": "27:30 – 28:30 · Make it personal. Make it tangible. The LinkedIn angle turns your talk into a week of inbound reach.",
-      "footer": "Call To Action"
-    },
-    {
-      "type": "closing",
-      "kicker": "Thank You · Delhi",
-      "heading": "Questions?",
-      "qrText": "[ QR CODE → slides + prompt playbook ]",
-      "columns": [
-        {
-          "label": "Find me",
-          "items": [
-            {"strong": "[Your Name]"},
-            {"text": "💼 linkedin.com/in/[you]"},
-            {"text": "🐦 @[yourhandle]"},
-            {"text": "✍ blog.[your-site].com"}
-          ]
-        },
-        {
-          "label": "Resources",
-          "items": [
-            {"text": "→ Marketer MCP Docs"},
-            {"text": "→ Agent API Reference"},
-            {"text": "→ Claude Desktop Download"},
-            {"text": "→ My Demo Video (YouTube)"}
-          ]
-        }
-      ],
-      "hint": "28:30 – 30:00 · QR on screen. I'll be at the back by the coffee. Come say hi. Done.",
-      "footer": "SUGCON India 2026 · New Delhi · June 4–5"
-    }
-  ]
+	"meta": {
+		"event": "SUGCON India 2026 · New Delhi · June 4–5",
+		"title": "Claude, Meet Sitecore.",
+		"subtitle": "How I run an entire Sitecore website from an AI chat window — using the Marketer MCP.",
+		"speakers": [
+			{
+				"name": "Dev Kheradiya",
+				"title": "Horizontal",
+				"linkedin": "linkedin.com/in/[you]",
+				"twitter": "@[yourhandle]",
+				"blog": "blog.[your-site].com"
+			},
+			{
+				"name": "Ravi Vadher",
+				"title": "Horizontal",
+				"linkedin": "linkedin.com/in/[you]",
+				"twitter": "@[yourhandle]",
+				"blog": "blog.[your-site].com"
+			}
+		],
+		"track": "Marketers Track"
+	},
+	"slides": [
+		{
+			"type": "title",
+			"kicker": "SUGCON India 2026 · New Delhi · June 4–5",
+			"title": "Claude, Meet Sitecore.",
+			"subtitle": "How I run an entire Sitecore website from an AI chat window — using the <span class='accent'>Marketer MCP</span>.",
+			"pills": [
+				{ "text": "Live Demos", "class": "cyan" },
+				{ "text": "Zero Code", "class": "" },
+				{ "text": "Enterprise-Ready", "class": "green" }
+			],
+			"hint": "0:00 – 0:30 · Walk on, smile, wait for the room to settle. Good morning, Delhi.",
+			"footer": "Marketers Track · 30 min"
+		},
+		{
+			"type": "split",
+			"kicker": "The Reality in 2026",
+			"kickerClass": "red",
+			"heading": "A marketer opens Sitecore to change <span class='accent-red'>one headline</span>.",
+			"left": {
+				"variant": "bad",
+				"heading": "Traditional flow — 47 clicks",
+				"items": [
+					"Log into Cloud Portal",
+					"Switch to XM Cloud Pages",
+					"Find the right site · right page",
+					"Open Experience Editor",
+					"Click the component · Edit · Save",
+					"Switch languages · Repeat",
+					"Open Explorer to create variant",
+					"Configure personalization rule",
+					"Publish · Validate · Done (maybe)"
+				]
+			},
+			"right": {
+				"variant": "good",
+				"heading": "With Marketer MCP — 1 prompt",
+				"quote": "Update the homepage hero headline to 'Biggest Diwali Sale Ever — 70% Off', create a Hindi version, and add a returning-customer personalization.",
+				"footnote": "That's it. That's the whole interface."
+			},
+			"hint": "0:30 – 2:00 · Raise hands: Who's done the 47-click dance this week? Wait. Laugh together.",
+			"footer": "The Problem"
+		},
+		{
+			"type": "chat",
+			"kicker": "The Promise",
+			"heading": "In the next 28 minutes, <span class='accent-cyan'>I won't open Sitecore Pages once.</span>",
+			"lead": "I'll create pages · add components · localize to Hindi · set up personalization · pull a brief from Asana · ping Slack — all from <b>one chat window</b>.",
+			"messages": [
+				{ "role": "you", "text": "Create a Diwali Mega Sale page with a hero, make a Hindi version, and personalize for returning customers." },
+				{ "role": "tool", "text": "calling create_page..." },
+				{ "role": "tool", "text": "calling add_component_on_page..." },
+				{ "role": "tool", "text": "calling update_content..." },
+				{ "role": "tool", "text": "calling add_language_version..." },
+				{ "role": "tool", "text": "calling create_personalization_version..." },
+				{ "role": "claude", "text": "Done. Page created, Hindi variant live, personalization active. <a>Preview ↗</a>" }
+			],
+			"hint": "2:00 – 3:00 · Point at the screen. This is real. Not a mockup. Watch.",
+			"footer": "The Promise"
+		},
+		{
+			"type": "diagram",
+			"kicker": "The What",
+			"heading": "MCP, in one sentence.",
+			"pull": "<span class='highlight'>MCP is USB-C for AI</span> — one open standard that lets any AI assistant talk to any business tool.",
+			"nodes": [
+				{ "icon": "🧑", "label": "Marketer", "sub": "Natural language" },
+				{ "icon": "🤖", "label": "Claude · Copilot · Cursor", "sub": "The AI client" },
+				{ "icon": "🔌", "label": "Marketer MCP", "sub": "The translator", "primary": true },
+				{ "icon": "🌐", "label": "SitecoreAI", "sub": "The action" }
+			],
+			"cards": [
+				{ "title": "Open Standard", "body": "Donated to the Linux Foundation (Dec 2025). Not locked to any one vendor." },
+				{ "title": "Any AI, Any Tool", "body": "Claude, ChatGPT, Gemini, Copilot — all speak MCP. So do Asana, Figma, Slack, Jira." },
+				{ "title": "Already In Your Box", "body": "Marketer MCP ships with SitecoreAI. No extra license, no infra to run." }
+			],
+			"hint": "3:00 – 4:30 · The USB-C analogy lands with every audience — keep it short, move on.",
+			"footer": "What Is MCP?"
+		},
+		{
+			"type": "architecture",
+			"kicker": "Under the Hood",
+			"heading": "From prompt to Sitecore action — in 6 steps.",
+			"steps": [
+				{ "n": "1.", "text": "Marketer types in Claude" },
+				{ "n": "2.", "text": "LLM parses intent" },
+				{ "n": "3.", "text": "Selects MCP tool <code>(create_page)</code>" },
+				{ "n": "4.", "text": "MCP calls Agent API endpoint" },
+				{ "n": "5.", "text": "Sitecore executes · audits · returns" },
+				{ "n": "6.", "text": "Claude shows result in chat" }
+			],
+			"cards": [
+				{ "title": "Security Layer", "body": "OAuth 2.0 via Sitecore Identity · short-lived tokens · tenant isolation · every tool call authenticated." },
+				{ "title": "Permission Inheritance", "body": "The AI can't do anything <i>you</i> can't do. Your Sitecore role is the ceiling." },
+				{ "title": "Full Audit Trail", "body": "Every action logged with job ID. Reviewable. Reversible." },
+				{ "title": "Your Data Stays Yours", "body": "Prompts and content never train the model. Zero data leakage by design." }
+			],
+			"hint": "4:30 – 6:00 · This slide kills the biggest enterprise objection: Is it safe?",
+			"footer": "Architecture & Security"
+		},
+		{
+			"type": "tools",
+			"kicker": "What Ships Today",
+			"heading": "30+ tools. Every major marketer workflow.",
+			"tools": [
+				{ "name": "list_sites · list_pages", "desc": "Navigate your tenant" },
+				{ "name": "create_page · get_page_html", "desc": "Build & preview pages" },
+				{ "name": "get_page_screenshot", "desc": "Visual preview in chat" },
+				{ "name": "add_component_on_page", "desc": "Drop in heroes, banners, CTAs" },
+				{ "name": "update_content", "desc": "Change copy on any page" },
+				{ "name": "add_language_version", "desc": "Localize in one step" },
+				{ "name": "create_personalization_version", "desc": "Audience variants" },
+				{ "name": "find_assets · update_alt_text", "desc": "DAM operations" },
+				{ "name": "generate_brief · list_brand_kits", "desc": "Campaign planning" }
+			],
+			"note": "New in Q1 2026: <span class='accent-cyan'>get_page_preview_url</span>, <span class='accent-cyan'>get_personalization_condition_templates</span>, and more.",
+			"hint": "6:00 – 7:00 · Skim fast. Don't memorize — just know the surface area is huge.",
+			"footer": "Tool Inventory"
+		},
+		{
+			"type": "cards",
+			"kicker": "Live Demo · 1 of 2",
+			"kickerClass": "green",
+			"heading": "From zero to connected — in 2 minutes.",
+			"cards": [
+				{ "title": "Step 1 · Claude Desktop", "body": "Settings → Connectors → <b>Add custom connector</b>" },
+				{ "title": "Step 2 · Paste URL", "body": "<span class='mono'>https://edge-platform.sitecorecloud.io/mcp/marketer-mcp-prod</span>" },
+				{ "title": "Step 3 · OAuth + Pick Tenant", "body": "Login with your Sitecore creds · select Org · select Tenant · done." }
+			],
+			"bigNote": "✓ You're in. Claude now controls Sitecore.",
+			"bigNoteColor": "green",
+			"hint": "7:00 – 9:00 · SWITCH TO LIVE. Screen-share Claude Desktop. Pre-open settings for speed. Keep talking while OAuth redirects.",
+			"footer": "Demo 1 — Setup"
+		},
+		{
+			"type": "chat",
+			"kicker": "Live Demo · The Diwali Campaign",
+			"kickerClass": "green",
+			"heading": "One chat. Full campaign.",
+			"messages": [
+				{ "role": "you", "text": "Show me all my sites." },
+				{ "role": "tool", "text": "list_sites → SUGCON Demo Store ✓" },
+				{
+					"role": "you",
+					"text": "Create a new page Diwali Mega Sale 2026 under the homepage, add a hero, and set the headline to Biggest Diwali Sale Ever — 70% Off Everything."
+				},
+				{ "role": "tool", "text": "create_page ✓ add_component_on_page ✓ update_content ✓" },
+				{ "role": "you", "text": "Take a screenshot of the Diwali Mega Sale page." },
+				{ "role": "tool", "text": "get_page_screenshot → [image appears]" },
+				{ "role": "you", "text": "Create a Hindi version." },
+				{ "role": "tool", "text": "add_language_version (hi-IN) ✓" },
+				{ "role": "you", "text": "Add a personalization version for returning customers: hero says Welcome Back — Your Exclusive Deals Are Live." },
+				{ "role": "tool", "text": "create_personalization_version ✓" },
+				{ "role": "claude", "text": "Page live. Hindi variant created. Personalization active for Returning Visitor segment. Preview URL: ↗" }
+			],
+			"hint": "9:00 – 16:00 · Run the prompts SLOWLY. After each, ALT-TAB to Sitecore browser and show the change. This is the wow moment.",
+			"footer": "Demo 1 — Build"
+		},
+		{
+			"type": "chat",
+			"kicker": "Live Demo · 2 of 2 · The Only-MCP-Can-Do-This Moment",
+			"kickerClass": "red",
+			"heading": "One prompt. <span class='accent-red'>Four tools.</span> Zero tab switching.",
+			"messages": [
+				{
+					"role": "you",
+					"text": "Pull the latest approved campaign brief from Asana, build a landing page in Sitecore based on it, and post a note in #marketing on Slack when it's live."
+				},
+				{ "role": "tool", "text": "Asana MCP · get_task(Approved Briefs) → Republic Day Offer ✓" },
+				{ "role": "tool", "text": "Marketer MCP · create_page(Republic Day Offer) ✓" },
+				{ "role": "tool", "text": "Marketer MCP · add_component_on_page(hero) ✓" },
+				{ "role": "tool", "text": "Marketer MCP · update_content(26% Off · Celebrate Republic Day) ✓" },
+				{ "role": "tool", "text": "Slack MCP · post_message(#marketing, 🇮🇳 Page is live: [preview-url]) ✓" },
+				{ "role": "claude", "text": "All done. Campaign brief → Sitecore → Slack notified. Total time: 14 seconds." }
+			],
+			"bigNote": "A marketer who needed <b>3 days</b> and a developer just did this in <b>14 seconds</b>.",
+			"hint": "16:00 – 22:00 · THE CLIMAX. This is what no one else will show. Have Asana + Slack pre-open in tabs. Reveal each tab after the action completes.",
+			"footer": "Demo 2 — Orchestration"
+		},
+		{
+			"type": "split",
+			"kicker": "Enterprise Angle",
+			"heading": "Not a Claude user? Microsoft Copilot Studio works too.",
+			"left": {
+				"variant": "good",
+				"heading": "Same MCP endpoint",
+				"items": ["Same URL, same tools, same auth", "Build custom agents inside M365", "Your marketing team stays in Teams", "Governance via Microsoft Purview"]
+			},
+			"right": {
+				"variant": "",
+				"heading": "<span style='color:#c7d2fe'>Choose your AI. Choose your workflow.</span>",
+				"pills": [
+					{ "text": "Claude Desktop", "class": "cyan" },
+					{ "text": "Copilot Studio", "class": "cyan" },
+					{ "text": "Cursor IDE", "class": "cyan" },
+					{ "text": "ChatGPT (soon)", "class": "" },
+					{ "text": "Gemini (soon)", "class": "" }
+				],
+				"footnote": "MCP is the standard. Sitecore speaks it. Your AI speaks it. You win."
+			},
+			"hint": "22:00 – 24:00 · Show Copilot Studio screenshot if short on time; demo live if comfortable.",
+			"footer": "Multi-Client"
+		},
+		{
+			"type": "split",
+			"kicker": "The Question Everyone Asks",
+			"heading": "Marketer MCP <span style='color:#94a3b8'>vs.</span> Agentic Studio — when to use what?",
+			"left": {
+				"variant": "",
+				"heading": "<span style='color:#22d3ee'>Use Marketer MCP when…</span>",
+				"items": [
+					"⚡ Quick actions from your AI assistant",
+					"🔗 Cross-tool workflows (Sitecore + Asana + Slack)",
+					"🎯 You live in Claude / Copilot already",
+					"🚀 Rapid campaign setup & prototyping"
+				],
+				"nobullet": true
+			},
+			"right": {
+				"variant": "",
+				"heading": "<span style='color:#f472b6'>Use Agentic Studio when…</span>",
+				"items": ["🧩 Multi-step automated workflows", "🛠 Custom agent building (Workflow Editor)", "📊 Signals & market intelligence", "👥 Team collaboration in Spaces"],
+				"nobullet": true
+			},
+			"bigNote": "They're <span class='accent-cyan'>complementary</span>, not competing. MCP = the remote. Agentic Studio = the war room.",
+			"hint": "24:00 – 26:00 · Pre-empt the #1 question from the audience. Score points for clarity.",
+			"footer": "Positioning"
+		},
+		{
+			"type": "cards",
+			"kicker": "Be Honest With Your Audience",
+			"kickerClass": "amber",
+			"heading": "What's the catch? <span style='color:#94a3b8'>(There's always a catch.)</span>",
+			"cards": [
+				{
+					"title": "⚠ Early days",
+					"titleColor": "red",
+					"body": "Marketer MCP is only reliable for documented use cases. Off-script prompts can produce unexpected output."
+				},
+				{
+					"title": "⚠ Always review",
+					"titleColor": "red",
+					"body": "Treat AI-generated pages like any draft — review before publish. Existing approval workflows still apply."
+				},
+				{
+					"title": "⚠ Needs Stream enabled",
+					"titleColor": "red",
+					"body": "Your Cloud Portal admin must turn on Sitecore Stream. Takes 5 minutes, but check before you evangelize."
+				},
+				{ "title": "✓ Rollback is a click", "titleColor": "green", "body": "Every AI change is versioned. Undo is native. You're never stuck with a hallucination." }
+			],
+			"hint": "26:00 – 27:30 · This slide BUILDS trust. Honesty about limits = credibility for the rest of the claims.",
+			"footer": "Real Talk"
+		},
+		{
+			"type": "challenge",
+			"kicker": "Before Your Flight Home Tonight",
+			"kickerClass": "red",
+			"heading": "Your 2-minute challenge.",
+			"steps": [
+				{ "time": "1 min", "text": "Open claude.ai/download · install Claude Desktop" },
+				{ "time": "30 sec", "text": "Settings → Connectors → paste the Marketer MCP URL" },
+				{ "time": "30 sec", "text": "Login · pick your tenant · you're connected" },
+				{ "time": "Bonus", "text": "Type: Create a page called Hello SUGCON · screenshot the result · tag me on LinkedIn", "highlight": true }
+			],
+			"bigNote": "The first 10 people who do this and DM me → I'll send you the prompt playbook I used today.",
+			"hint": "27:30 – 28:30 · Make it personal. Make it tangible. The LinkedIn angle turns your talk into a week of inbound reach.",
+			"footer": "Call To Action"
+		},
+		{
+			"type": "closing",
+			"kicker": "Thank You · Delhi",
+			"heading": "Questions?",
+			"qrText": "[ QR CODE → slides + prompt playbook ]",
+			"columns": [
+				{
+					"label": "Find me",
+					"items": [{ "strong": "Dev Kheradiya" }, { "text": "https://www.linkedin.com/in/devnkheradiya" }]
+				},
+				{
+					"label": "Find me",
+					"items": [{ "strong": "Ravi Vadher" }, { "text": "https://in.linkedin.com/in/vadherravi" }]
+				},
+				{
+					"label": "Resources",
+					"items": [
+						{ "text": "→ Marketer MCP Docs" },
+						{ "text": "→ Agent API Reference" },
+						{ "text": "→ Claude Desktop Download" },
+						{ "text": "→ My Demo Video (YouTube)" }
+					]
+				}
+			],
+			"hint": "28:30 – 30:00 · QR on screen. I'll be at the back by the coffee. Come say hi. Done.",
+			"footer": "SUGCON India 2026 · New Delhi · June 4–5"
+		}
+	]
 }

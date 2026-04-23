@@ -113,7 +113,10 @@ html,body{height:100%;font-family:'Inter','Segoe UI',system-ui,sans-serif;backgr
 .tool-item .desc{font-size:13px;color:#cbd5e1}
 
 .title-meta{margin-top:60px;display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.title-meta .title-speakers{min-width:0}
 .title-meta .speaker-label{font-size:14px;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.title-meta .speakers-list{display:flex;flex-wrap:wrap;gap:28px 40px;margin-top:8px}
+.title-meta .speaker-block{min-width:200px}
 .title-meta .speaker-name{font-size:24px;font-weight:700;margin-top:4px}
 .title-meta .speaker-title{font-size:16px;color:var(--muted)}
 
